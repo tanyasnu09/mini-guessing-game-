@@ -1,23 +1,24 @@
 let x = Math.floor(Math.random() * 100) + 1;
 let score=100;
+let guesses=1;
 let y =prompt("hey guess a number between 1 and 100");
 y = Number.parseInt(y);
 while(y!==x){
     if(y>x)
     {
+       
    console.log("the no you guessed is greater  than the exact number")
      y =parseInt(prompt("Guess again"));
-     score--;
+   score-=1;
+      guesses++;
 
     }
     else if (y<x){
-      console.log("The number  you guessed is lesser than 100");
+      console.log("The number  you guessed is lesser than the exact number");
  y =parseInt(prompt("Guess again"));
  score--;
+       guesses++;
       
     }
 }
- 
-    console.log("Hurray you guessed it right");
-    console.log("the final score is ",score)
   
